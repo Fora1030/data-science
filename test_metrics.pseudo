@@ -1,0 +1,9 @@
+// For finding test metrcs at each voltage cutoff, First all the voltage cutoff crossings are record and saved
+// temporarily. Once the raw data analysis is complete, the following critiria is applied to the filter all the
+// Voltage cutoffs crossings:
+// 1.   Any voltage cutoff in a pulse or rapid data collection window is ignored. 
+// 2.   Voltage drop at the biggining of the discharge is ignored if the voltage drop is due to 
+//      depasivation of voltage delay. This is done by ignoring the first 60 seconds of the discharge.
+// 3.   The first voltage cutoff crossing that is not ignored is selected for the test metrics table, 
+//      All remaining measurements are ignored.
+// NOTE: if the are more than three voltage cut-off a GUI wil prompt the user to select the correct voltage cutoff
